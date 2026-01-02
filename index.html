@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HaloDock – Smart Dock for Windows</title>
+  <title>HaloDock – Smart App Groups for Windows</title>
 
-  <meta name="description" content="HaloDock is a modern, Fluent-inspired productivity dock for Windows 11." />
+  <meta name="description" content="HaloDock lets you group related apps into elegant, animated docks to keep your Windows taskbar clean and focused." />
   <meta name="theme-color" content="#0f172a" />
+
+  <!-- Microsoft Store Badge -->
+  <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
 
   <style>
     :root {
@@ -37,7 +40,7 @@
     }
 
     header {
-      padding: 72px 24px 56px;
+      padding: 80px 24px 64px;
       text-align: center;
     }
 
@@ -52,59 +55,33 @@
       text-shadow: 0 0 32px var(--accent-glow);
     }
 
-    header p {
+    .tagline {
+      margin-top: 16px;
+      font-size: 1.25rem;
+      color: var(--text);
+    }
+
+    .description {
       margin-top: 18px;
-      max-width: 680px;
+      max-width: 720px;
       margin-inline: auto;
       color: var(--muted);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.65;
     }
 
     .actions {
-      margin-top: 36px;
+      margin-top: 40px;
       display: flex;
-      gap: 16px;
+      gap: 20px;
       justify-content: center;
       flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 28px;
-      border-radius: 14px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      backdrop-filter: var(--blur);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #60a5fa, #3b82f6);
-      color: #020617;
-      box-shadow: 0 16px 40px var(--accent-glow);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 24px 60px var(--accent-glow);
-    }
-
-    .btn-secondary {
-      background: var(--surface);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 40px rgba(0,0,0,.4);
     }
 
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 48px 24px 80px;
+      padding: 56px 24px 88px;
     }
 
     .grid {
@@ -139,17 +116,17 @@
     }
 
     .preview {
-      margin-top: 64px;
+      margin-top: 72px;
       text-align: center;
     }
 
     .preview h2 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       font-weight: 600;
     }
 
     .mock {
-      margin-top: 28px;
+      margin-top: 30px;
       border-radius: 26px;
       padding: 48px;
       background:
@@ -165,7 +142,7 @@
 
     footer {
       text-align: center;
-      padding: 36px 24px;
+      padding: 40px 24px;
       font-size: 0.85rem;
       color: var(--muted);
       border-top: 1px solid var(--border);
@@ -177,71 +154,86 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1><span>HaloDock</span></h1>
-  <p>
-    A Fluent-inspired productivity dock for Windows 11.  
-    Fast access, clean design, and zero distractions.
-  </p>
+
+  <div class="tagline">
+    Smart App Groups for a Cleaner Windows Taskbar
+  </div>
+
+  <div class="description">
+    HaloDock lets you group related applications into elegant,
+    animated docks — keeping your taskbar minimal and your workflow fast.
+  </div>
 
   <div class="actions">
-    <a href="https://YOUR_MICROSOFT_STORE_LINK" class="btn btn-primary">
-      Get it on Microsoft Store
-    </a>
-    <a href="https://github.com/YOUR_REPO" class="btn btn-secondary">
-      GitHub
-    </a>
+    <ms-store-badge
+      productid="9P9CNGFV9ZBZ"
+      window-mode="full"
+      theme="auto"
+      size="large"
+      language="tr-tr"
+      animation="on">
+    </ms-store-badge>
   </div>
 </header>
 
 <main>
-  <section class="grid">
+  <section class="grid" id="features">
     <div class="card">
-      <h3>⚡ Instant Access</h3>
+      <h3>App Grouping</h3>
       <p>
-        Launch grouped apps and tools with a single click,
-        without cluttering your taskbar.
+        Combine multiple related applications under a single taskbar icon.
+        Ideal for Office tools, AI apps, or development workflows.
       </p>
     </div>
 
     <div class="card">
-      <h3>🪟 Fluent Design</h3>
+      <h3>Fluent Animations</h3>
       <p>
-        Glassy surfaces, smooth motion, and a look that
-        feels native to Windows 11.
+        Smooth, subtle animations inspired by Fluent Design,
+        enhancing clarity without distraction.
       </p>
     </div>
 
     <div class="card">
-      <h3>🧠 Smart Organization</h3>
+      <h3>Taskbar Friendly</h3>
       <p>
-        Group Office, AI tools, dev utilities, or anything
-        else into elegant docks.
+        Designed specifically for the Windows taskbar,
+        respecting native behavior and user expectations.
       </p>
     </div>
 
     <div class="card">
-      <h3>🔒 Lightweight & Respectful</h3>
+      <h3>Lightweight & Native</h3>
       <p>
-        No background noise, no telemetry.
-        Just a focused productivity tool.
+        No background clutter, no telemetry.
+        Just fast, predictable, native performance.
       </p>
     </div>
   </section>
 
   <section class="preview">
-    <h2>Designed to stay out of your way</h2>
+    <h2>Designed for Windows 11</h2>
+
     <div class="mock">
-      Screenshot or animated GIF of HaloDock goes here  
-      (Replace this box with an image later)
+      <strong>HaloDock Preview</strong><br><br>
+      Fan-style animated dock expanding from the Windows taskbar.<br>
+      Replace this box with a real screenshot or animated GIF.
     </div>
+
+    <p style="margin-top:18px; font-size:0.9rem; color:var(--muted);">
+      Actual UI may vary slightly depending on system settings.
+    </p>
   </section>
 </main>
 
 <footer>
-  © <span>HaloDock</span> — Built for Windows power users
+  © HaloDock — Built for Windows 11<br>
+  <span>Lightweight • No Telemetry • Native Performance</span>
 </footer>
 
 </body>
